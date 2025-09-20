@@ -1,5 +1,7 @@
 package ArrayStringMethod;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
         //Arrays (int[], String[])
@@ -16,11 +18,16 @@ public class Main {
         System.out.println(cars.length);
 
         //using new keyword
-        String[] myCars = new String[3]; //[3] size of array
+        String[] myCars = new String[4]; //[3] size of array
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("What's your car? -> ");
+        String userCar = scanner.nextLine();
 
         myCars[0] = "Honda";
         myCars[1] = "Lambo";
         myCars[2] = "Dodge";
+        myCars[3] = userCar;
 
         //looping trough array to print indexes
         for (int i = 0; i < myCars.length; i++){
@@ -55,7 +62,73 @@ public class Main {
         System.out.println(myStr.substring(0,5)); //Hello
 
         //Methods
+        myMethod();
+        myMethod();
+
+        //Parameters
+        myOtherMethod("Sara");
+
+        anotherMethod("Sara", 23);
+
+        //Method with if / else
+        checkAge(17);
+
+        //Method + return
+        System.out.println(returnMethod(4));
+
+        System.out.println(returnMethodTwo(5, 5));
+
+        int z = variableMethod(6, 1);
+        System.out.println(z);
+
+        //Method Overloading
 
 
+        //Method scope
+
+        //Method recursion
     }
+
+    //Methods
+    static void myMethod(){
+        System.out.println("Code executed!");
+    }
+
+    //Parameters
+    static void myOtherMethod(String fname){
+        System.out.println(fname + " Linda");
+    }
+
+    static void anotherMethod(String name, int age){
+        System.out.println(name + " is " + age);
+    }
+
+    //Method with if / else
+    static void checkAge(int age){
+        if (age < 18){
+            System.out.println("Access denied");
+        }
+        else{
+            System.out.println("Access granted - Welcome back");
+        }
+    }
+
+    //Method using return
+    static int returnMethod(int x){
+        return 5 + x;
+    }
+
+    static int returnMethodTwo(int a, int b){
+        return a * b;
+    }
+
+    static int variableMethod(int w, int y){
+        return w - y;
+    }
+
+    //Method Overloading - multiple methods can have the same name with different parameters
+
+    //Method scope
+
+    //Method recursion
 }
