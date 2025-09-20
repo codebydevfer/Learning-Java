@@ -82,11 +82,29 @@ public class Main {
         System.out.println(z);
 
         //Method Overloading
-
-
-        //Method scope
+        int num1 = plusMethod(5, 5);
+        double num2 = plusMethod(5.5, 6.5);
+        System.out.println("Int = " + num1 + " Double = " + num2 + " | Total = " + (num1 + num2));
 
         //Method recursion
+        //Adding from 1 to 10
+        int result = sum(10);
+        System.out.println(result);
+
+        //Halting condition
+        //Adding from 5 to 10
+        int secondResult = secondSum(5, 10);
+        System.out.println(secondResult);
+
+        //Countdown
+        countdown(5);
+
+        //Mini-projects
+        //Find max/min number in an array -> Pending
+        //Word counter (count word in a string) -> Pending
+        //Temperature converter (Celsius -> <- Fahrenheit) -> Pending
+
+
     }
 
     //Methods
@@ -127,8 +145,41 @@ public class Main {
     }
 
     //Method Overloading - multiple methods can have the same name with different parameters
+    static int plusMethod(int x, int y){
+        return x + y;
+    }
 
-    //Method scope
+    static double plusMethod(double x, double y){
+        return x + y;
+    }
 
     //Method recursion
+    //Adding from 1 to 10
+    public static int sum(int k){
+        if (k > 0){
+            return k + sum(k - 1);
+        }
+        else{
+            return 0;
+        }
+    }
+
+    //Halting condition
+    //Adding from 5 to 10
+    public static int secondSum(int start, int end){
+        if (end > start){
+            return end + secondSum(start, end - 1);
+        }
+        else{
+            return end;
+        }
+    }
+
+    //Countdown
+    static void countdown(int n){
+        if (n > 0){
+            System.out.println(n + " ");
+            countdown(n - 1);
+        }
+    }
 }
