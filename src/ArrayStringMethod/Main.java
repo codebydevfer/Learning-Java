@@ -105,6 +105,28 @@ public class Main {
         //Temperature converter (Celsius -> <- Fahrenheit) -> Pending
 
 
+        //Find max/min number in array
+        int[] numbersArray = new int[4];
+        Scanner numberScanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int numberOne = numberScanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int numberTwo = numberScanner.nextInt();
+        System.out.print("Enter the third number: ");
+        int numberThree = numberScanner.nextInt();
+        System.out.print("Enter the fourth number: ");
+        int numberFour = numberScanner.nextInt();
+
+        numbersArray[0] = numberOne;
+        numbersArray[1] = numberTwo;
+        numbersArray[2] = numberThree;
+        numbersArray[3] = numberFour;
+
+        for (int a = 0; a < numbersArray.length; a++){
+            System.out.println(numbersArray[a]);
+        }
+
+        if (numbersArray[0] >)
     }
 
     //Methods
