@@ -100,9 +100,9 @@ public class Main {
         countdown(5);
 
         //Mini-projects
-        //Find max/min number in an array -> Pending
-        //Word counter (count word in a string) -> Pending
-        //Temperature converter (Celsius -> <- Fahrenheit) -> Pending
+        //Find max/min number in an array -> Done
+        //Word counter (count word in a string) -> Done
+        //Temperature converter (Celsius -> <- Fahrenheit) -> Done
 
 
         //Find max/min number in array
@@ -122,11 +122,44 @@ public class Main {
         numbersArray[2] = numberThree;
         numbersArray[3] = numberFour;
 
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
         for (int a = 0; a < numbersArray.length; a++){
-            System.out.println(numbersArray[a]);
+            if (numbersArray[a] < min){
+                min = numbersArray[a];
+            }
+            if (numbersArray[a] > max){
+                max = numbersArray[a];
+            }
         }
+        System.out.println("Min: " + min + " " + "Max: " + max);
 
-        if (numbersArray[0] >)
+        //Word Counter (counting words in a string)
+        Scanner stringInput = new Scanner(System.in);
+        System.out.print("Enter your string here: ");
+        String userInput = stringInput.nextLine();
+
+        int countWords = userInput.split("\\s").length;
+
+        System.out.println(countWords);
+
+        //Temperature converter C <- -> F
+        Scanner tempC = new Scanner(System.in);
+        System.out.print("Select 'C' or 'F': ");
+        String tempCInput = tempC.nextLine();
+
+        if (tempCInput.equals("F")){
+            System.out.print("Type temperature in Celsius: ");
+            double celsius = tempC.nextInt();
+            double cToF = celsius * 9/5 + 32;
+            System.out.println(celsius + " celsius converted to fahrenheit = " + cToF);
+        }
+        else if (tempCInput.equals("C")){
+            System.out.print("Type temperature in Fahrenheit: ");
+            double fahrenheit = tempC.nextInt();
+            double fToC = fahrenheit - 32 * 5/9;
+            System.out.println(fahrenheit + " fahrenheit converted to celsius = " + fToC);
+        }
     }
 
     //Methods
