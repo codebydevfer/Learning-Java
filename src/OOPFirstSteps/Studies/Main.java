@@ -46,5 +46,57 @@ public class Main {
         //Note: Not necessary to create multiple objects (Main obj = new Main()...)...
 
         //Methods
+        myMethod();
+
+        //Static method
+        myStaticMethod();
+
+        //Public method
+        Main myNewObj = new Main();
+        myNewObj.myPublicMethod();
+
+        //Access methods with an object
+        Main myCar = new Main();
+        myCar.fullThrottle();
+        myCar.speed(300);
+
+        //Constructors - special method that is used to initialize objects
     }
+    //Methods
+    static void myMethod(){
+        System.out.println("Hello World!");
+    }
+
+    //Static vs Public
+
+    //Static method
+    static void myStaticMethod(){
+        System.out.println("Static methods can be called without creating objects.");
+    }
+
+    //Public method
+    public void myPublicMethod(){
+        System.out.println("Public methods must be called by creating objects.");
+    }
+
+    //Access methods with an object
+    public void fullThrottle(){
+        System.out.println("The car is going as fast as it can!");
+    }
+
+    public void speed(int maxSpeed){
+        System.out.println("Max speed is: " + maxSpeed);
+    }
+
+    //Using multiple classes
+//    public void fullThrottle(){
+//        System.out.println("The car is going as fast as it can!");
+//    }
+//
+//    public void speed(int maxSpeed){
+//        System.out.println("Max speed is: " + maxSpeed);
+//    }
+
+    //Constructors - special method that is used to initialize objects
+
 }
